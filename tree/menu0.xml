@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<item action="files/1.html" icon="soft">File #1</item>
+	<item subsrc="menu.xml" icon="soft">Submenu</item>
+	<item action="files/2.html" icon="soft" subsrc="menu1.xml">File #2 &amp; submenu</item>
+</menu>

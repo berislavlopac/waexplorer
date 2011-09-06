@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Berislav Lopac (WA Research) -->
+<!DOCTYPE tree SYSTEM "watree.dtd">
+<tree base="../../biosScan12db/template/">
+	<item context="generic">
+		<title>Windows 2000</title>
+		<action>servers/serversall.xml</action>
+		<icon>comp.gif</icon>
+	</item>
+	<item context="generic">
+		<title>Windows XP</title>
+		<icon>comp.gif</icon>
+	</item>
+	<item context="generic">
+		<title>Windows NT</title>
+		<icon>comp.gif</icon>
+	</item>
+	<item context="generic">
+		<title>Windows 9x</title>
+		<icon>comp.gif</icon>
+	</item>
+	<item context="generic">
+		<title>Other</title>
+		<icon>comp.gif</icon>
+	</item>
+</tree>

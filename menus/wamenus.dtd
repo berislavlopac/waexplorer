@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT menu (itemsgroup+)>
+<!ATTLIST menu
+	type (menu | menubar | toolbar) "menu"
+>
+<!ELEMENT itemsgroup (item+)>
+<!ELEMENT item (title, action, icon?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT action (#PCDATA)>
+<!ATTLIST action
+	type CDATA #IMPLIED
+	context CDATA #IMPLIED
+>
+<!ELEMENT icon (#PCDATA)>

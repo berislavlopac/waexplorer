@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<item action="javascript:alert('1');">SubItem #1 drugi fajl</item>
+	<item action="javascript:alert('2');">SubItem #2 drugi fajl</item>
+	<item subsrc="menu0.xml">SubItem #3</item>
+</menu>

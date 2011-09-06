@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<item icon="soft" action="javascript:alert('1');">SubItem #1</item>
+	<item icon="soft" action="javascript:alert('2');">SubItem #2</item>
+	<item icon="soft" subsrc="nema_me.xml">SubItem #2</item>
+	<item icon="soft" subsrc="menu2.xml">SubItem #3</item>
+	<item icon="soft">Neki naslov
+		<item icon="soft" subsrc="menu1.xml" action="javascript:alert('test');">Blabla</item>
+		<item icon="soft" action="javascript:alert('kvak');">njanjanja</item>
+		<item icon="soft">Nema ništa</item>
+	</item>
+</menu>

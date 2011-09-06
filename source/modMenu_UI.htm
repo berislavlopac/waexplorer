@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Modify menu</title>
+		<style type="text/css">
+			<!--
+	* {
+		font-size: 11px;
+		font-family: Tahoma, Verdana;
+	}
+
+	body {
+		background: #F5F5F5;
+	}
+-->
+		</style>
+		<script language="JavaScript" type="text/javascript" src="scripts/main.js"></script>
+		<script language="JavaScript" type="text/javascript" src="scripts/modmenus.js"></script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// VARIABLES AND FUNCTIONS SPECIFIC FOR THIS FORM
+var langCode = 'en';
+var mM = new modMenu(langCode);
+
+var modMenusXslText = '<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>	<xsl:template match="/"><select id="listItems" style="margin-top:5px;" size="10" onchange="this.value.split(\':\');mM.selectItem(this.value.split(\':\')[0],this.value.split(\':\')[1]);displayItemParameters(mM);"><xsl:apply-templates select="menu/itemsgroup"/></select></xsl:template><xsl:template match="itemsgroup"><optgroup label="============================="><xsl:apply-templates select="item"><xsl:with-param name="group_pos"><xsl:number value="position()"/></xsl:with-param></xsl:apply-templates></optgroup></xsl:template><xsl:template match="item"><xsl:param name="group_pos"/><option><xsl:attribute name="value"><xsl:value-of select="$group_pos"/>:<xsl:number value="position()"/></xsl:attribute><xsl:value-of select="title"/></option></xsl:template></xsl:stylesheet>';
+
+var modMenusXsl = new ActiveXObject('Microsoft.XMLDOM');
+	modMenusXsl.async = true;
+	modMenusXsl.loadXML(modMenusXslText);
+var frm = null;
+
+function displayItemParameters(modMenu) {
+	frm = document.forms.editDeleteAddItem;
+	modMenu.selNode.selectSingleNode('title') ? frm.title.value = modMenu.selNode.selectSingleNode('title').text : frm.title.value = '';
+	modMenu.selNode.selectSingleNode('action/@type') ? frm.actionType.value = modMenu.selNode.selectSingleNode('action/@type').text : frm.actionType.value = '';
+	modMenu.selNode.selectSingleNode('action') ? frm.action.value = modMenu.selNode.selectSingleNode('action').text : frm.action.value = '';
+	modMenu.selNode.selectSingleNode('icon') ? frm.icon.value = modMenu.selNode.selectSingleNode('icon').text : frm.icon.value = '';
+}
+
+function displayXml(modMenu) {
+	modMenu.xml.parseError.errorCode != 0 ? alert(modMenu.xml.parseError.reason) : document.getElementById('listItems').outerHTML = modMenu.xml.transformNode(modMenusXsl);
+}
+
+function clearSelection(modMenu) {
+	selNode=null;
+	displayXml(modMenu);
+	clearForm();
+}
+
+function clearForm() {
+	if(frm) {
+		frm.title.value = '';
+		frm.actionType.value = '';
+		frm.action.value = '';
+		frm.icon.value = '';
+	}
+}
+
+// funkcija za prebacivanje tabova (ne koristi se)
+function switchTabs(selTab) {
+	var selTabBody = document.getElementById(selTab.id+'Body');
+	var qTabs = document.getElementById('tabHandles').childNodes.length;
+	//if (typeof tabNo == 'string') tabNo = tabNo.charCodeAt(0)-64;
+	for (t=1;t<=qTabs;t++) {
+		currTabHandle = document.getElementById('waTab'+t);
+		currTabBody = document.getElementById('waTab'+t+'Body');
+		currTabHandle == selTab ? currTabHandle.className = 'tabActive' : currTabHandle.className = 'tabInactive';
+		currTabBody == selTabBody ? currTabBody.style.display = 'block' : currTabBody.style.display = 'none';
+	}
+}
+
+	//-->
+		</script>
+	</head>
+	<body>
+		<form id="editDeleteAddItem" action="">
+			<fieldset>
+				<legend>Menu and bar items</legend>
+				Select file:
+				<select name="menuFiles" onchange="if(mM.loadMenu(this.value)) clearSelection(mM);">
+					<option value="" selected></option>
+					<optgroup label="Menu files:">
+						<option value="menus/generic.xml">generic</option>
+						<option value="menus/link.xml">link</option>
+						<option value="menus/submenu.xml">submenu</option>
+					</optgroup>
+					<optgroup label="Bar files:">
+						<option value="bars/default.xml">default</option>
+						<option value="bars/menu.xml">menu</option>
+						<option value="bars/tool.xml">tool</option>
+					</optgroup>
+				</select>
+				<br />
+				<select id="listItems" style="display: none;"></select>
+			</fieldset>
+			<fieldset>
+				<legend>Item properties</legend>
+				Title: <input type="text" name="title" /><br />
+				Action:	<input type="text" name="action" /><br />
+				Action type: <input type="text" name="actionType" /><br />
+				Icon: <input type="text" name="icon" />
+			</fieldset>
+			<fieldset>
+				<legend>Buttons</legend>
+				<button name="addItemButton" value="Add" type="button" onclick="if(mM.addItem(this.form.title.value,this.form.action.value,this.form.actionType.value,this.form.icon.value)) clearSelection(mM);">Insert*</button>
+				<button name="editItemButton" value="Edit" type="button" onclick="if (mM.editItem(this.form.title.value,this.form.action.value,this.form.actionType.value,this.form.icon.value)) clearSelection(mM);">Edit</button>
+				<button name="deleteItemButton" value="Delete" type="button" onclick="if(mM.deleteItem()) clearSelection(mM);">Delete</button><br />
+				<button name="clearFormButton" value="Clear form" type="button" onclick="clearForm();">Clear form</button>
+				<button name="clearSelectionButton" value="Clear selection" type="button" onclick="clearSelection(mM);">Clear selection</button>
+				<div>* To insert an item: Select the item after which you wish to insert the new one, then click "Clear form", enter the new item's data and click "Insert".</div>
+			</fieldset>
+			<fieldset>
+				<legend>Finish</legend>
+				<button name="saveFileButton" value="Save file" type="button" onclick="alert('The file cannot be saved with client scripting only!');">Save file</button>
+				<button name="cancelChanges" value="Cancel changes" type="button" onclick="if(confirm('Warning: Any changes you may have made will be lost!')) if(mM.loadMenu(this.form.menuFiles.value)) clearSelection(mM);">Cancel changes</button>
+
+			</fieldset>
+		</form>
+	</body>
+</html>

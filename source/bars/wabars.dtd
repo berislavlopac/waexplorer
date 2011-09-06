@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bar (itemsgroup+)>
+<!ATTLIST bar
+	contents (buttons | menus) #REQUIRED
+>
+<!ELEMENT itemsgroup (item+)>
+<!ELEMENT item (title, action, icon?)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT icon (#PCDATA)>
+<!ELEMENT action (#PCDATA)>

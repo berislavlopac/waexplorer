@@ -1,0 +1,103 @@
+/* STYLES FOR THE waMENU COMPONENT */
+#waMenuMain {
+	border: 1px solid Silver;
+	font: 11px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background: White url(cmback.gif) repeat-y;
+	color: Black;
+	text-align: left;
+	padding: 0;
+}
+
+#waMenuMain .menuItem {
+	border: none;
+	background: none;
+	margin: 1px;
+	padding: 4px 4px 4px 33px;
+	text-indent: -31px;
+	cursor: default;
+	color: Black;
+}
+
+#waMenuMain .menuItemOver {
+	background: #E9EAEC;
+	border: 1px solid #B2B4BF;
+	padding: 3px 3px 3px 32px;
+	margin: 1px;
+	text-indent: -31px;
+	cursor: default;
+	color: Black;
+}
+	
+#waMenuMain .submenuPointer {
+	float: right;
+	margin-top: 1px;
+	margin-right: 3px;
+}
+
+#waMenuMain .menuIcon {
+	margin-right: 15px;
+	vertical-align: middle;
+}
+
+/* STYLES FOR THE waBAR COMPONENT */
+div.waBar {
+	background: #DCDADE;
+	color: Black;
+	border: 1px outset;
+	margin: 0;
+	padding: 5px;
+	font: 11px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	cursor: default;
+}
+
+div.waBar span.handle {
+	background: Gray;
+	color: Gray;
+	margin-left: 3px;
+	padding: 4px 0;
+	cursor: move;
+}
+
+div.waBar .barGroup {
+	display: inline-block;
+	border-right: 2px ridge;
+	margin-right: 5px;
+}
+
+div.waBar .barGroupLast {
+	display: inline-block;
+	border-right: none;
+}
+
+div.waBar .barMenu {
+	display: inline-block;
+	color: Black;
+	text-decoration: none;
+	cursor: default;
+	border: none;
+	margin: 0 5px 1px 0;
+	padding: 3px 5px;
+}
+
+div.waBar .barMenuOver {
+	display: inline-block;
+	color: Black;
+	text-decoration: none;
+	cursor: default;
+	border: none;
+	background: #E9EAEC;
+	border: 1px solid #B2B4BF;
+	margin: 0 5px 1px 0;
+	padding: 2px 4px;
+}
+
+.barMenu img, .barMenuOver img  {
+	vertical-align: middle;
+	margin: 2px 0;
+}
+
+/*div.waBar a:active {
+	border: 1px inset;
+	margin: -1px;
+	margin-right: 4px;
+}*/

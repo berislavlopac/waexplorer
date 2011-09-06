@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "wamenus.dtd">
+<menu>
+	<itemsgroup>
+		<item>
+			<title>Naslov 1: sad malo isprobavam da vidim koliko ovo može biti dugačko</title>
+			<action type="url">Ovo je neka akcija</action>
+			<icon>comp</icon>
+		</item>
+		<item>
+			<title>Naslov 2</title>
+			<action type="url">http://www.incanus.com</action>
+		</item>
+		<item>
+			<title>Naslov 3</title>
+			<action type="script">javascript:void(0);</action>
+		</item>
+		<item>
+			<title>Google</title>
+			<action type="url">http://www.google.com</action>
+		</item>
+	</itemsgroup>
+	<itemsgroup>
+		<item>
+			<title>Ovo ima submenu</title>
+			<action type="submenu">submenu</action>
+		</item>
+		<item>
+			<title>Naslov 5</title>
+			<action type="url">Ovo je neka akcija</action>
+		</item>
+	</itemsgroup>
+	<itemsgroup>
+		<item>
+			<title>Test 1: ovo je druga grupa</title>
+			<action type="url">Ovo je neka akcija</action>
+		</item>
+	</itemsgroup>
+	<itemsgroup>
+		<item>
+			<title>Naslov 77</title>
+			<action type="url">Ovo je neka akcija</action>
+		</item>
+		<item>
+			<title>Naslov 895</title>
+			<action type="url">Ovo je neka akcija</action>
+			<icon>cgrp</icon>
+		</item>
+		<item>
+			<title>Naslov 99</title>
+			<action type="url">Ovo je neka akcija</action>
+		</item>
+		<item>
+			<title>Naslov 10.000</title>
+			<action type="url">Ovo je neka akcija</action>
+		</item>
+	</itemsgroup>
+</menu>

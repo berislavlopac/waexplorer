@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loc xml:lang="en">
+	<group scope="modMenus">
+		<text id="alert1">The item must contain title, action and action type!</text>
+		<text id="alert2">The item must contain title, action and icon!</text>
+		<text id="alert3">The item must contain title and action!</text>
+		<text id="alert4">Please select an item to edit.</text>
+		<text id="alert5">Please select an item to delete.</text>
+		<text id="alert6">Please select the item after which to insert a new item.</text>
+		<text id="confirm1">Do you really want to delete this item?</text>
+		<text id="confirm1a">Note: As it is the only item in its group, this will also delete the group.</text>
+	</group>
+	<group scope="waTree">
+		<text id="loadMessage">Loading...</text>
+		<text id="errorMessage">The resource is unavailable at this time.</text>
+	</group>
+	<group scope="modTree">
+		<text id="caption2">Insert item</text>
+		<text id="caption1">Edit item</text>
+		<text id="delConfirm">Do you really want to delete this item and all its sub-items?</text>
+	</group>
+	<group scope="waExplorer">
+		<text id="treeResizerTitle">Drag to resize tree view</text>
+		<text id="treeHeader">Tree view</text>
+		<text id="treeCloserTitle">Close tree view</text>
+		<text id="treeOpenerTitle">Open tree view</text>
+		<text id="testText">Try the contextual menu.</text>
+	</group>
+</loc>

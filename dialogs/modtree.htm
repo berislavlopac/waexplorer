@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Modify menu</title>
+		<style type="text/css">
+			<!--
+	* {
+		font-size: 11px;
+		font-family: Tahoma, Verdana;
+	}
+
+	body {
+		background: #F5F5F5;
+	}
+-->
+		</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+// VARIABLES AND FUNCTIONS SPECIFIC FOR THIS FORM
+
+var arg = window.dialogArguments;
+var iconLoc = 'styles/icons/'
+var frm;
+
+window.onload = initFrm;
+
+function initFrm() {
+	frm = document.forms.treeItem;
+	frm.firstChild.firstChild.innerHTML = arg.caption;
+	document.getElementById('modifyButton').innerHTML = arg.caption;
+	switch(arg.action) {
+		case 2 :
+			break;
+		case 1 :
+			frm.title.value = arg.selLink.title;
+			frm.action.value = arg.selLink.href;
+			frm.context.value = arg.selLink.context;
+			frm.icon.value = arg.selLink.firstChild.src.substr(arg.selLink.firstChild.src.lastIndexOf('/')+1,arg.selLink.firstChild.src.length);
+	}
+}
+
+function modifyItem() {
+	switch(arg.action) {
+		case 'Insert item' :
+			if(frm.title.value) {
+				frm.icon.value ? arg.newLink.firstChild.src = iconLoc + frm.icon.value : arg.newLink.firstChild.src = iconLoc + 'any.gif';
+				var tempIcon = arg.newLink.firstChild.outerHTML;
+				arg.newLink.title = frm.title.value;
+				arg.newLink.href = frm.action.value;
+				arg.newLink.context = frm.context.value;
+				arg.newLink.innerHTML = tempIcon + frm.title.value;
+				arg.selBranch.parentElement.insertBefore(arg.newBranch,arg.selBranch);
+				window.close();
+			}
+			else alert('You need to enter the title!');
+			break;
+		case 'Edit item' :
+			if(frm.title.value) {
+				frm.icon.value ? arg.selLink.firstChild.src = iconLoc + frm.icon.value : arg.selLink.firstChild.src = iconLoc + 'any.gif';
+				var tempIcon = arg.selLink.firstChild.outerHTML;
+				arg.selLink.title = frm.title.value;
+				arg.selLink.href = frm.action.value;
+				arg.selLink.context = frm.context.value;
+				arg.selLink.innerHTML = tempIcon + frm.title.value;
+				//arg.selBranch.parentElement.insertBefore(arg.newBranch,arg.selBranch);
+				window.close();
+			}
+			else alert('You need to enter the title!');
+			break;
+	}
+}
+//-->
+</script>
+	</head>
+	<body>
+		<form id="treeItem" action="">
+		<fieldset>
+			<legend></legend>
+			Title: <input type="text" name="title"><br>
+			Action: <input type="text" name="action"><br>
+			Icon: <input type="text" name="icon"><br>
+			Context: <input type="text" name="context"><br>
+			<button name="modifyButton" id="modifyButton" onClick="modifyItem();"></button>&nbsp;
+			<button name="cancelButton" id="cancelButton" onClick="window.close();">Cancel</button>
+		</fieldset>
+		
+		</form>
+	</body>
+</html>

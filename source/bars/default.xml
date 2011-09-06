@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "../menus/wamenus.dtd">
+<menu type="menubar">
+	<itemsgroup>
+		<item>
+			<title>File</title>
+			<action>generic</action>
+		</item>
+		<item>
+			<title>Edit</title>
+			<action>subitem</action>
+		</item>
+		<item>
+			<title>Default</title>
+			<action>subitem</action>
+		</item>
+		<item>
+			<title>Default</title>
+			<action>generic</action>
+		</item>
+	</itemsgroup>
+</menu>

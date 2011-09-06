@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "wamenus.dtd">
+<menu>
+	<itemsgroup>
+		<item>
+			<title>Ovo je menu pod nazivom "link".</title>
+			<action type="script">void(0);</action>
+		</item>
+		<item>
+			<title>Ako me klikneš &lt;b&gt;eksplodirat ću.&lt;/b&gt;</title>
+			<action type="script">alert('BOOM!');</action>
+			<icon>comp</icon>
+		</item>
+		<item>
+			<title>Ovo zuji.</title>
+			<action type="script">alert('ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ');</action>
+		</item>
+	</itemsgroup>
+	<itemsgroup>
+		<item>
+			<title>Neki manji naslov</title>
+			<action type="submenu" context="link">alert("njanja")</action>
+			<icon>soft</icon>
+		</item>
+		<item>
+			<title>Još jednom: ovo je LINK!</title>
+			<action type="url">http://www.incanus.com</action>
+		</item>
+	</itemsgroup>
+</menu>

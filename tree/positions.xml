@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Berislav Lopac (WA Research) -->
+<!DOCTYPE tree SYSTEM "watree.dtd">
+<tree base="http://www.wa-research.com/">
+	<item context="link">
+		<title>XML/C++ SuperGuru</title>
+		<action>jobs/jobs.xcsg.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>C++ Developer</title>
+		<action>jobs/jobs.jcpg.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>DHTML Scripter</title>
+		<action>jobs/jobs.xdtm.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>Education/Documentation specialist</title>
+		<action>jobs/jobs.ueds.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>Software Product Architect</title>
+		<action>jobs/jobs.spar.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>Project Management Coordinator</title>
+		<action>jobs/jobs.pmco.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>Production Artist</title>
+		<action>jobs/jobs.paop.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>Product Manager</title>
+		<action>jobs/jobs.pmch.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+</tree>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Berislav Lopac (WA Research) -->
+<!DOCTYPE tree SYSTEM "watree.dtd">
+<tree base="../../biosScan12db/template/">
+	<item context="link">
+		<title>Inspect software</title>
+		<icon>soft.gif</icon>
+		<item context="brlj">
+			<title>Licence management</title>
+			<action>programs/programsall.xml?page=1</action>
+			<icon>soft.gif</icon>
+		</item>
+		<item>
+			<title>Excluded from licence management</title>
+			<action>programs/excluded_software.xml</action>
+			<icon>soft.gif</icon>
+		</item>
+	</item>
+	<item>
+		<title>Computers</title>
+		<action>servers/serversall.xml</action>
+		<icon>cgrp.gif</icon>
+		<item>
+			<title>Unsuccessful logins</title>
+			<icon>error.gif</icon>
+		</item>
+		<item subsrc="db_groups.xml">
+			<title>Groups</title>
+			<action>groups/groups.xml</action>
+		</item>
+		<item context="generic" subsrc="db_segments.xml">
+			<title>Network segments</title>
+			<action>networkscan/netscans.xml</action>
+			<icon>cgrp.gif</icon>
+		</item>
+		<item context="generic" subsrc="oses.xml">
+			<title>By operating system</title>
+			<icon>cgrp.gif</icon>
+		</item>
+	</item>
+	<item>
+		<title>Settings</title>
+		<action>application/settings.xml</action>
+		<icon>sett.gif</icon>
+	</item>
+</tree>

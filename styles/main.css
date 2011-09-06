@@ -1,0 +1,141 @@
+/* GENERAL STYLE DEFINITIONS */
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	background: #DCDADE;
+}
+
+/* STYLES FOR THE MAIN CONTENT AREA */
+#mainHolder {
+	background: #DCDADE;
+	color: Black;
+	height: 100%;
+}
+
+#treeBox {
+	background: #DCDADE;
+	color: Black;
+	font: 11px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+	width: 200px;
+	height: 100%;
+	float: left;
+	padding: 5px 0 5px 5px;
+}
+
+#treeResizer {
+	cursor: e-resize;
+	vertical-align: middle;
+	float: right;
+	height:100%;
+	background: Silver;
+	/*border: 2px outset;*/
+}
+
+#treeHead {
+	background: #DCDADE;
+	color: Black;
+	font: 11px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	cursor: default;
+	margin-bottom: 5px;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+#treeBody {
+	background: White;
+	color: Black;
+	width: 100%;
+	border: 1px inset;
+	padding: 5px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+#treeHandle {
+	display: none;
+	background: #DCDADE;
+	color: Black;
+	font: 11px Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+	vertical-align: top;
+	padding: 4px 1px 4px 4px;
+	width: 0%;
+	float: left;
+}
+
+#contentHolder {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 1px inset;
+	overflow: auto;
+	position: relative;
+}
+
+
+/* STYLES FOR THE TREE VIEW */
+#xMenu {
+	white-space: nowrap;
+}
+
+#xMenu #menuTitle {
+	font-weight: bold;
+	font-size: 12pt;
+	margin-bottom: 3px;
+}
+
+#xMenu div.menuBranchContainer {
+	padding-top: 3px;
+}
+
+#xMenu div.menuBranchContainerDragOver {
+	padding-top: 1px;
+	border-top: 2px ridge;
+}
+
+#xMenu div.menuItemContainer {
+	padding: 1px 0;
+}
+
+#xMenu img.plusMinus {
+	margin-right: 8px;
+}
+
+#xMenu a.itemTitle, a.itemTitle:visited {
+	text-decoration: none;
+	vertical-align: text-bottom;
+	color: Navy;
+	cursor: default;
+}
+
+#xMenu a.itemTitleAction, a.itemTitleAction:visited {
+	text-decoration: none;
+	vertical-align: text-bottom;
+	color: Navy;
+}
+
+#xMenu a.itemTitleAction:hover  {
+	text-decoration: underline;
+}
+
+#xMenu a.itemTitle img {
+	margin-right: 7px;
+	border: none;
+}
+
+#xMenu a.itemTitleAction img {
+	margin-right: 7px;
+	border: none;
+}
+
+#xMenu div.subMenu {
+	padding-left: 20px;
+}
+
+#xMenu div.subMenu .loadError {
+	color: Gray;
+}

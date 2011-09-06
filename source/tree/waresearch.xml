@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v4.4 U (http://www.xmlspy.com) by Berislav Lopac (WA Research) -->
+<!DOCTYPE tree SYSTEM "watree.dtd">
+<tree base="http://www.wa-research.com/">
+	<item context="link">
+		<title>Home</title>
+		<action>default.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link" id="aboutus">
+		<title>About us</title>
+		<icon>folder.gif</icon>
+		<item context="link">
+			<title>What WA</title>
+			<action>about.htm</action>
+			<icon>htm.gif</icon>
+		</item>
+		<item context="link">
+			<title>Team</title>
+			<action>team.htm</action>
+			<icon>htm.gif</icon>
+		</item>
+	</item>
+	<item context="link">
+		<title>Products</title>
+		<action>products/default.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link">
+		<title>Partners</title>
+		<action>partners.htm</action>
+		<icon>htm.gif</icon>
+	</item>
+	<item context="link" id="jobs">
+		<title>Jobs</title>
+		<action>jobs/default.htm</action>
+		<icon>folder.gif</icon>
+		<item context="link" subsrc="positions.xml" id="positions">
+			<title>Positions</title>
+			<action>jobs/positions.htm</action>
+			<icon>folder.gif</icon>
+		</item>
+		<item context="link">
+			<title>Selection</title>
+			<action>jobs/selection.htm</action>
+			<icon>htm.gif</icon>
+		</item>
+		<item context="link">
+			<title>Join us</title>
+			<action>jobs/join.asp</action>
+			<icon>htm.gif</icon>
+		</item>
+	</item>
+</tree>

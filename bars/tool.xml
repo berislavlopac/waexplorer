@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu SYSTEM "../menus/wamenus.dtd">
+<menu type="toolbar">
+	<itemsgroup>
+		<item>
+			<title>Home</title>
+			<action>alert('home');</action>
+			<icon>comp.gif</icon>
+		</item>
+		<item>
+			<title>Search</title>
+			<action>alert('search');</action>
+			<icon>cgrp.gif</icon>
+		</item>
+		<item>
+			<title>Settings</title>
+			<action>alert('settings');</action>
+			<icon>soft.gif</icon>
+		</item>
+	</itemsgroup>
+	<itemsgroup>
+		<item>
+			<title>Help</title>
+			<action>alert('help');</action>
+			<icon>sett.gif</icon>
+		</item>
+	</itemsgroup>
+</menu>
